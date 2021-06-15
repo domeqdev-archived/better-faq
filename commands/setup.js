@@ -29,8 +29,9 @@ module.exports = {
                 const gcustom = await message.channel.awaitMessages(m => m.author.id === message.author.id, { max: 1, time: 60000 })
                 if(!gcustom.first() || gcustom.first().content.toLowerCase() === 'cancel') return msg.edit("❌ Cancelled.") && msg.suppressEmbeds(true)
                 let custom = gcustom.first().content;
-            } else let custom = ""
-            
+            } else {
+                let custom = ""
+            }
             
 
             msg.delete()
