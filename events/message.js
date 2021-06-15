@@ -5,7 +5,7 @@ module.exports = (client, message) => {
 
     const match = message.content.match(`^<@!?${client.user.id}>`)
         if(match) {
-            if(!match[0]) return console.log('1');
+            if(!match[0]) return
         else {
             const args = message.content.slice(match[0].length + 1).trim().split(/ +/);
             let command = args.shift().toLowerCase();
