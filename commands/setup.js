@@ -24,14 +24,14 @@ module.exports = {
             let role = grole.first().mentions.roles.first() || message.guild.roles.cache.get(grole.first().content)
             if(!role || role.rawPosition >= message.guild.me.roles.highest.rawPosition) role = ""
 
+            let custom = null;
+        
             if(role) {
                 await msg.edit(`**4.** Enter custom message if user has non-listed question.`, embed.setDescription(`To cancel type \`cancel\`. You have **60** seconds to answer.`).setImage("https://isis.tools/raw/em8246FDB.png"))
                 const gcustom = await message.channel.awaitMessages(m => m.author.id === message.author.id, { max: 1, time: 60000 })
                 if(!gcustom.first() || gcustom.first().content.toLowerCase() === 'cancel') return msg.edit("❌ Cancelled.") && msg.suppressEmbeds(true)
                 let custom = gcustom.first().content;
-            } else {
-                let custom = ""
-            }
+            } 
             
 
             msg.delete()
