@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "dblapi.js": "^2.4.1",
-    "discord.js": "^12.5.1",
+    "discord.js": "^12.5.3",
     "discord.js-collector": "^1.8.1",
     "enmap": "^5.8.2",
     "fs": "^0.0.1-security",
