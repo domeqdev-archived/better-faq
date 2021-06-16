@@ -1,4 +1,3 @@
-const startBoot = Date.now(); //debug 
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 const Enmap = require("enmap");
@@ -31,7 +30,7 @@ fs.readdir("./events/", (err, files) => {
 });
 
 client.on('ready', () => {
-  console.log(`[ Shard #${client.guilds.cache.get(Array.from(client.guilds.cache.keys())[0]).shard.id} ] Shard is ready to use! (Loaded in ${Date.now() - startBoot}ms)`)
+  console.log(`Ready`)
 })
 
 client.login(client.config.token);
