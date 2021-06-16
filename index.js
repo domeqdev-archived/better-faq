@@ -1,3 +1,4 @@
+// you don't need to shard bot, just use "node bot.js".
 const { ShardingManager } = require('discord.js');
 const { token } = require('./config.json');
 
