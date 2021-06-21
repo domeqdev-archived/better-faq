@@ -6,7 +6,3 @@ With this bot, you can create FAQ panels.
 1. Edit `config.json`
 2. Run `npm i`
 3. Start bot using `node index.js`
-
-
-
-### ❌ This repository is no longer supported!
